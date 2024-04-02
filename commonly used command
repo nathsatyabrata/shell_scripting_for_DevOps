@@ -12,7 +12,7 @@
 -> ps -ef - to check which processes runing in linux system
 -> ps -ef | grep "python" - this will only show only the python processes runing in linux
 -> awk - this will give you specific columen of thr output. but grep will give you all information
--> ps -ef | grep "python" | awk -F" " '{print $2}' - $2 means seecond columen information will print.
+-> ps -ef | grep "python" | awk -F" " '{print $2}' - $2 means seecond columen information will print. -F means field separater(space between two coloumen).
 -> set -x - debug mode. this will add the command which you are executing in a .sh file. so in output you can see command first then result of the command. You can use echo also. write inside .sh file.
 -> set -e - exit the script when there is an error. mention inside .sh file. so if there is an error in first command then it will not execute the second command.
 -> set -o pipefail - when you write pipe(|) in fron of a wrong comand then correct command after pipe then. then if you not mentioned set -o then it will execute that wrong command. so we need to mention these command.
