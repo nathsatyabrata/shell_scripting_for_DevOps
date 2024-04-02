@@ -5,3 +5,19 @@
 -> bash, sh, ksh, dash - thesw are diffrent executables linux is using. coding is diffrent for these execuatables. but bash and sh is same. some os like ubuntu started usinf dash in some places.
 -> chmod 777 <file name>-> grand all [read(4), write(2), execute(1)] permission to everyone [me(7), greoup(7), everyone(7)]. 
 -> shellscript.sh -> to execute above file i need to add ./ or sh before executable file name.
+-> nproc - To check CPU of linux instance.
+-> free - To check Memory of linux instance.
+-> top - you can check which Processess using how much Memory and CPU.
+-> df -h - to check available disk space in linux
+-> ps -ef - to check which processes runing in linux system
+-> ps -ef | grep "python" - this will only show only the python processes runing in linux
+-> awk - this will give you specific columen of thr output. but grep will give you all information
+-> ps -ef | grep "python" | awk -F" " '{print $2}' - $2 means seecond columen information will print.
+-> set -x - debug mode. this will add the command which you are executing in a .sh file. so in output you can see command first then result of the command. You can use echo also. write inside .sh file.
+-> set -e - exit the script when there is an error. mention inside .sh file. so if there is an error in first command then it will not execute the second command.
+-> set -o pipefail - when you write pipe(|) in fron of a wrong comand then correct command after pipe then. then if you not mentioned set -o then it will execute that wrong command. so we need to mention these command.
+-> curl <url> | grep ERROR - to check logfile which is uploaded in some location like S3 or github. or if its in your local system then [cat <filename> | grep ERROR].
+-> curl - this command share the output of the link.
+-> wget - this command download the content in local system.
+-> sudo find / -name pam - this will find the file which name is pam. here / means find it everywhere 
+-> 
