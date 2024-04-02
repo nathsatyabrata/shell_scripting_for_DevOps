@@ -14,3 +14,127 @@ fi
 # For Loop (iterations) - we have for, while, until & select loop in shell scripting.
 -------------------------------------
 for i in {1.100}; do echo $i; done
+
+--------------------------------------------------------------------------------
+write a shell script to print numbers divided by 3 & 5 and not 15 till 1 to 100.
+--------------------------------------------------------------------------------
+
+Divisible by 3 (if condition).
+Divisible by 5 (if condition).
+And not divisible by 15 (Not if condition)
+1..100 (for loop)
+--------------------------------------------
+for  i in {1..100}; do
+if ([ `expr $i % 3` == 0 ] || [`expr $i % 5` == 0]) && [ `expr $i % % 15 != 0 ];
+then 
+   echo $i
+fi;
+done
+
+-----------------------------------------------
+#!/bin/bash
+
+for i in {1..100}; do
+  if { (( i % 3 == 0 || i % 5 == 0 )) && (( i % 15 != 0 )); } then
+    echo $i
+  fi
+done
+--------------------------------------------------------------------------
+Write a shell-script to print number of "S" in mississippi
+--------------------------------------------------------------------------
+#!/bin/bash
+x=mississippi
+grep -o "s" <<<"$x" | wc -l # (-o) refers to only, (wc) refers to word count in line, 
+
+or 
+
+#!/bin/bash
+
+word="mississippi"
+count=$(echo $word | grep -o "s" | wc -l)
+echo "The number of 'S' in mississippi is: $count"
+
+---------------------------------------------------------------------------------------------
+What is crontab in Linux ? can you provide an example of usage ?
+---------------------------------------------------------------------------------------------
+Crontab is like a alarm. We can set some task in a script on a particular time to get some information from system.
+For Example: node Health.
+
+--------------------------------------------------------
+What is the diffrence betwen soft link and hard link ?
+--------------------------------------------------------
+Hard Link:
+-> Acts as an additional copy of the original file.
+-> if the original file is deleted, the hard link still retains the data.
+cmd: ln originalfile hardlink
+
+Soft Link (Symbolic Link):
+-> Acts as a shortcut or pointer to the original file’s name.
+-> Does not contain the actual data but points to the file’s location, so if the original file is deleted, the soft link breaks.
+-> ln -s originalfile softlink
+
+In essence, hard links are like additional names for the same file content, while soft links are just pointers to file names
+
+------------------------------------------------------------
+What is the diffrence between break and continue statement ?
+------------------------------------------------------------
+Break - Breaking the execution
+Continue - Continue the execution or can say Skip this and continue the next.
+
+Example of Break: suppose we need to loop a big number, but if we got a perticular number then we can break the loop.
+Example of Continue: Suppose we don't need a number in a loop then we can use continue, then this will skip that number then continue the loop.
+------------------------------------------------
+What are some disadvantage of Shell-Scripting ?
+------------------------------------------------
+-> Errors are frequent and costly, and a single error can alter the command.
+-> The execution speed is slow.
+-> Bugs or inadequacies in the language's syntax or implementation.\
+-> Large, complex tasks aren't well suited to it.
+-> Contray to other scripting languages, it provides a minimal data structure.
+-> Every time shell command is executed a new process is lunched.
+----------------------------------------------------
+What are the diffrent type of loops in shell script?
+----------------------------------------------------
+We have 3 types of loop. 
+1. for Loop
+2. while Loop
+3. until Loop
+---------------------------------------------
+Is bash dynamic or statically typed and why ?
+---------------------------------------------
+shell is dynamic language like python.
+But golang or any muddernday language is static
+-----------------------------------
+Networking troubleshooting utility ?
+-----------------------------------
+traceroute googe.com - this will check the how many hope its using to reach google.com from my laptop.
+tracepath also we can but work is same
+-------------------------------------------
+How will you sort list of names in a file ?
+-------------------------------------------
+sort names.txt > sorted_names.txt
+------------------------------------------------------------------------------
+How will you manage logs of a system that generate huge log files everyday ?
+------------------------------------------------------------------------------
+We need to use logrotate. So we can setup a time zip the logfile after some time. Or we can delete the logfile after sometime.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
