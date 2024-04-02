@@ -1,0 +1,6 @@
+
+
+
+
+-> bash, sh, ksh, dash - thesw are diffrent executables linux is using. coding is diffrent for these execuatables. but bash and sh is same. some os like ubuntu started usinf dash in some places.
+-> chmod 777 <file name>-> grand all [read(4), write(2), execute(1)] permission to everyone [me(7), greoup(7), everyone(7)]. 
