@@ -20,4 +20,22 @@
 -> curl - this command share the output of the link.
 -> wget - this command download the content in local system.
 -> sudo find / -name pam - this will find the file which name is pam. here / means find it everywhere 
--> 
+-> trap - this command is used for traping the signals. sometime we dont want to run some comand so we can trap that command with signal name. then we can sent a message and notification if someone using that command.
+-> What are linux signals ? when we are give some command to linux terminal its sending some signal to kernel. There is lot of linux signl we have you can google it to know more.
+-> kill -9 java - this is used to kill a process. -9 means instructs to kill .example java or you can give process id.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
