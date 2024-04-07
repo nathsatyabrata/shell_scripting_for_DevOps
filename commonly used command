@@ -1,7 +1,7 @@
-
-
-
-
+-> We are using shell scripting for automate some task in Linux.
+-> ls -ltr - show all details about file with time stamp and who created
+-> man ls - If you sifux man with any command then you will get all the details about that command. (man = manual)
+-> #!/bin/bash - this indetation we need to use. (#!) This is called shebang. in end we can add /bash or /sh or /ksh
 -> bash, sh, ksh, dash - thesw are diffrent executables linux is using. coding is diffrent for these execuatables. but bash and sh is same. some os like ubuntu started usinf dash in some places.
 -> chmod 777 <file name>-> grand all [read(4), write(2), execute(1)] permission to everyone [me(7), greoup(7), everyone(7)]. 
 -> shellscript.sh -> to execute above file i need to add ./ or sh before executable file name.
